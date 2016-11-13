@@ -1,0 +1,17 @@
+<div class="section">
+    <h3>{{headingTitle}}</h3>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Estado</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="campaign in campaigns">
+                <td>{{campaign.nombre}}</td>
+                <td>{{campaign.estado}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
