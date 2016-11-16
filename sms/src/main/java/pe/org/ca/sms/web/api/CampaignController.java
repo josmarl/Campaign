@@ -7,6 +7,7 @@ package pe.org.ca.sms.web.api;
 
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
@@ -27,6 +28,21 @@ public class CampaignController {
     @RequestMapping(value = "/all", method = RequestMethod.GET)
     public List<Campaign> allCampaigns() {
         return campaignService.findCampaigns();
+    }
+
+    @RequestMapping(value = "/edit/{id}", method = RequestMethod.GET)
+    public void editCampaign(@PathVariable Campaign campaign) {
+        campaignService.updateCampaign(campaign);
+    }
+
+    @RequestMapping(value = "/remove/{id}", method = RequestMethod.GET)
+    public void removeCampaign(@PathVariable Long id) {
+        campaignService.removeCampaign(id);
+    }
+
+    @RequestMapping(value = "find/{id}", method = RequestMethod.GET)
+    public Campaign findCampaign(@PathVariable Long id) {
+        return campaignService.findCampaignById(id);
     }
 
 }

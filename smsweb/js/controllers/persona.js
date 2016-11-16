@@ -1,3 +1,5 @@
+/* global SERVER */
+
 'use strict';
 
 app.controller('personaController', ['$scope', '$rootScope', '$http', function ($scope, $rootScope, $http) {
@@ -10,7 +12,7 @@ app.controller('personaController', ['$scope', '$rootScope', '$http', function (
 
         $scope.loadData = function () {
             $http({
-                url: "http://localhost:8082/persona/all",
+                url: SERVER + "/persona/all",
                 method: "GET"
             }).success(function (response) {
                 $scope.personas = response;

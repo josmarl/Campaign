@@ -15,4 +15,10 @@ import pe.org.ca.sms.domain.Campaign;
 public interface CampaignService {
 
     public List<Campaign> findCampaigns();
+
+    void removeCampaign(Long id);
+
+    void updateCampaign(Campaign campaign);
+
+    Campaign findCampaignById(Long id);
 }

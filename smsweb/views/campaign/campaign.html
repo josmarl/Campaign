@@ -1,0 +1,27 @@
+<div class="section">
+    <h3>{{headingTitle}}</h3>
+    <table class="table" >
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Nombre</th>
+                <th>Estado</th>
+                <th>Opciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="campaign in campaigns">
+                <td>{{campaign.id}}</td>
+                <td>{{campaign.nombre}}</td>
+                <td>{{campaign.estado}}</td>
+                <td>
+                    <div class="btn-group">
+                        <a href="#" class="btn btn-sm btn-primary" data-tooltip="tooltip" title="Ver Detalles"><i class="glyphicon glyphicon-cog"></i></a>
+                        <a ng-href="#/campaign/edit/{{campaign.id}}" class="btn btn-sm btn-success btn-primary"><span class="glyphicon glyphicon-pencil"></span></a>
+                        <a ng-click="removeCampaign(campaign)" class="btn btn-sm btn-danger btn-primary"><span class="glyphicon glyphicon-trash"></span></a>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

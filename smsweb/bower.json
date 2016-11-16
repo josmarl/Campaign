@@ -1,0 +1,28 @@
+{
+  "name": "smsweb",
+  "description": "app web",
+  "main": "index.js",
+  "authors": [
+    "josmarl"
+  ],
+  "license": "ISC",
+  "keywords": [
+    "angular"
+  ],
+  "homepage": "index.html",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.5.5",
+    "angular-resource": "^1.5.5",
+    "angular-route": "^1.5.5",
+    "angular-momentjs": "^0.2.2",
+    "moment": "^2.14.1",
+    "bootstrap": "~3.3.7"
+  }
+}

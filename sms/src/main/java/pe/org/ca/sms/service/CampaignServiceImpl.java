@@ -25,4 +25,19 @@ public class CampaignServiceImpl implements CampaignService {
     public List<Campaign> findCampaigns() {
         return campaignMapper.findCampaigns();
     }
+
+    @Override
+    public void removeCampaign(Long id) {
+        campaignMapper.removeCampaign(id);
+    }
+
+    @Override
+    public void updateCampaign(Campaign campaign) {
+        campaignMapper.updateCampaign(campaign);
+    }
+
+    @Override
+    public Campaign findCampaignById(Long id) {
+        return campaignMapper.findCampaignById(id);
+    }
 }
